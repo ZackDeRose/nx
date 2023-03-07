@@ -3,5 +3,9 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "e2e/utils",
   "projectType": "library",
-  "targets": {}
+  "targets": {
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
+  }
 }

@@ -6,12 +6,16 @@
   "targets": {
     "build-base": {
       "executor": "@nrwl/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/typedoc-theme",
         "main": "typedoc-theme/src/index.ts",
         "tsConfig": "typedoc-theme/tsconfig.lib.json",
-        "assets": ["typedoc-theme/*.md"]
+        "assets": [
+          "typedoc-theme/*.md"
+        ]
       }
     },
     "build": {
@@ -22,7 +26,10 @@
       }
     },
     "lint": {},
-    "test": {}
+    "test": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
   "tags": []
 }

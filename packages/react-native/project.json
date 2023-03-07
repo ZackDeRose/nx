@@ -34,7 +34,9 @@
           {
             "input": "packages/react-native",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json"],
+            "ignore": [
+              "**/tsconfig*.json"
+            ],
             "output": "/"
           },
           {
@@ -52,10 +54,15 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/react-native"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/react-native"
+      ],
       "options": {
         "command": "node ./scripts/copy-readme.js react-native"
       }
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   }
 }

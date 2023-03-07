@@ -12,8 +12,15 @@
         "passWithNoTests": true,
         "runInBand": true
       },
-      "outputs": ["{workspaceRoot}/coverage/e2e/linter"]
+      "outputs": [
+        "{workspaceRoot}/coverage/e2e/linter"
+      ]
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   },
-  "implicitDependencies": ["linter"]
+  "implicitDependencies": [
+    "linter"
+  ]
 }

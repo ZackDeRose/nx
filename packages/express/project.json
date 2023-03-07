@@ -22,13 +22,19 @@
           {
             "input": "packages/express",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              ".eslintrc.json"
+            ],
             "output": "/"
           },
           {
             "input": "packages/express",
             "glob": "**/*.js",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -46,12 +52,19 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/express"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/express"
+      ],
       "options": {
         "command": "node ./scripts/copy-readme.js express"
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
-  "implicitDependencies": ["node"]
+  "implicitDependencies": [
+    "node"
+  ]
 }

@@ -3,10 +3,14 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/nx",
   "projectType": "library",
-  "implicitDependencies": ["graph-client"],
+  "implicitDependencies": [
+    "graph-client"
+  ],
   "targets": {
     "build-native": {
-      "outputs": ["{projectRoot}/src/native/*.node"],
+      "outputs": [
+        "{projectRoot}/src/native/*.node"
+      ],
       "executor": "@monodon/rust:napi",
       "options": {
         "dist": "packages/nx/src/native",
@@ -50,7 +54,9 @@
           {
             "input": "packages/nx",
             "glob": "**/*.{js,css,html,svg}",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -71,7 +77,9 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/nx"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/nx"
+      ],
       "options": {
         "commands": [
           {
@@ -98,6 +106,9 @@
     },
     "lint": {},
     "test": {},
-    "test-native": {}
+    "test-native": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   }
 }

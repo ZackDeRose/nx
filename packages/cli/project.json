@@ -23,13 +23,19 @@
           {
             "input": "packages/cli",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              ".eslintrc.json"
+            ],
             "output": "/"
           },
           {
             "input": "packages/cli",
             "glob": "**/*.js",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -47,7 +53,9 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/cli"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/cli"
+      ],
       "options": {
         "commands": [
           {
@@ -60,7 +68,12 @@
         "parallel": false
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
-  "implicitDependencies": ["workspace"]
+  "implicitDependencies": [
+    "workspace"
+  ]
 }

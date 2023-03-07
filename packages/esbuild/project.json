@@ -22,13 +22,19 @@
           {
             "input": "packages/esbuild",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              ".eslintrc.json"
+            ],
             "output": "/"
           },
           {
             "input": "packages/esbuild",
             "glob": "**/*.js",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -46,11 +52,16 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/esbuild"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/esbuild"
+      ],
       "options": {
         "command": "node ./scripts/copy-readme.js esbuild"
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   }
 }

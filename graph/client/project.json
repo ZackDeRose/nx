@@ -39,7 +39,9 @@
         "main": "graph/client/src/main.tsx",
         "polyfills": "graph/client/src/polyfills.ts",
         "tsConfig": "graph/client/tsconfig.app.json",
-        "styles": ["graph/client/src/styles.css"],
+        "styles": [
+          "graph/client/src/styles.css"
+        ],
         "scripts": [],
         "assets": [],
         "webpackConfig": "graph/client/webpack.config.js",
@@ -178,7 +180,9 @@
         }
       },
       "defaultConfiguration": "release",
-      "outputs": ["{options.outputPath}"]
+      "outputs": [
+        "{options.outputPath}"
+      ]
     },
     "serve-base": {
       "executor": "@nrwl/webpack:dev-server",
@@ -221,7 +225,9 @@
           "parallel": false
         },
         "release": {
-          "commands": ["npx nx serve-base graph-client --configuration release"]
+          "commands": [
+            "npx nx serve-base graph-client --configuration release"
+          ]
         },
         "release-static": {
           "commands": [
@@ -229,7 +235,9 @@
           ]
         },
         "watch": {
-          "commands": ["npx nx serve-base graph-client --configuration watch"]
+          "commands": [
+            "npx nx serve-base graph-client --configuration watch"
+          ]
         },
         "nx-console": {
           "commands": [
@@ -256,7 +264,9 @@
     },
     "build-storybook": {
       "executor": "@nrwl/storybook:build",
-      "outputs": ["{options.outputDir}"],
+      "outputs": [
+        "{options.outputDir}"
+      ],
       "options": {
         "uiFramework": "@storybook/react",
         "configDir": "graph/client/.storybook",
@@ -267,6 +277,9 @@
           "quiet": true
         }
       }
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   },
   "tags": []

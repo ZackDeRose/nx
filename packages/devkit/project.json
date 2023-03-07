@@ -22,13 +22,19 @@
           {
             "input": "packages/devkit",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              ".eslintrc.json"
+            ],
             "output": "/"
           },
           {
             "input": "packages/devkit",
             "glob": "**/*.js",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -46,11 +52,16 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/devkit"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/devkit"
+      ],
       "options": {
         "command": "node ./scripts/copy-readme.js devkit"
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   }
 }

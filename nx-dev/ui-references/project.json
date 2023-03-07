@@ -6,6 +6,9 @@
   "tags": [],
   "targets": {
     "lint": {},
-    "test": {}
+    "test": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   }
 }

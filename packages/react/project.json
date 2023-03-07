@@ -32,7 +32,11 @@
           {
             "input": "packages/react",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              ".eslintrc.json"
+            ],
             "output": "/"
           },
           {
@@ -43,7 +47,9 @@
           {
             "input": "packages/react",
             "glob": "**/*.js",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -56,11 +62,16 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/react"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/react"
+      ],
       "options": {
         "command": "node ./scripts/copy-readme.js react"
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   }
 }

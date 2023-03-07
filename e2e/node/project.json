@@ -5,7 +5,13 @@
   "projectType": "application",
   "targets": {
     "e2e": {},
-    "run-e2e-tests": {}
+    "run-e2e-tests": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
-  "implicitDependencies": ["node", "nest"]
+  "implicitDependencies": [
+    "node",
+    "nest"
+  ]
 }

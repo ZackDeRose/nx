@@ -52,13 +52,19 @@
           {
             "input": "packages/workspace",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              ".eslintrc.json"
+            ],
             "output": "/"
           },
           {
             "input": "packages/workspace",
             "glob": "**/*.{js,css,html,svg}",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -76,7 +82,9 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/workspace"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/workspace"
+      ],
       "options": {
         "commands": [
           {
@@ -98,6 +106,9 @@
         "parallel": false
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   }
 }

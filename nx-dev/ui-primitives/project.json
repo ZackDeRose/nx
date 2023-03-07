@@ -7,10 +7,17 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["nx-dev/ui-primitives/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "nx-dev/ui-primitives/**/*.{ts,tsx,js,jsx}"
+        ]
       }
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   }
 }

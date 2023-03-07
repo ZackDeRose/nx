@@ -18,8 +18,16 @@
         "testingType": "e2e"
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
-  "tags": ["scope:nx-dev", "type:e2e"],
-  "implicitDependencies": ["nx-dev"]
+  "tags": [
+    "scope:nx-dev",
+    "type:e2e"
+  ],
+  "implicitDependencies": [
+    "nx-dev"
+  ]
 }

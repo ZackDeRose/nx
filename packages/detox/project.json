@@ -33,7 +33,9 @@
           {
             "input": "./packages/detox",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json"],
+            "ignore": [
+              "**/tsconfig*.json"
+            ],
             "output": "/"
           },
           {
@@ -46,10 +48,15 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/detox"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/detox"
+      ],
       "options": {
         "command": "node ./scripts/copy-readme.js detox"
       }
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   }
 }

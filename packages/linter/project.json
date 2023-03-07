@@ -22,13 +22,19 @@
           {
             "input": "packages/linter",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              ".eslintrc.json"
+            ],
             "output": "/"
           },
           {
             "input": "packages/linter",
             "glob": "**/*.js",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -46,12 +52,19 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/linter"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/linter"
+      ],
       "options": {
         "command": "node ./scripts/copy-readme.js linter"
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
-  "implicitDependencies": ["eslint-plugin-nx"]
+  "implicitDependencies": [
+    "eslint-plugin-nx"
+  ]
 }

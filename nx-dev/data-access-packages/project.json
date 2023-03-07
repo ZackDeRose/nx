@@ -5,7 +5,13 @@
   "projectType": "library",
   "targets": {
     "lint": {},
-    "test": {}
+    "test": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
-  "tags": ["scope:nx-dev", "type:data-access"]
+  "tags": [
+    "scope:nx-dev",
+    "type:data-access"
+  ]
 }

@@ -39,7 +39,10 @@
           {
             "input": "packages/expo",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "**/project.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "**/project.json"
+            ],
             "output": "/"
           },
           "LICENSE"
@@ -48,10 +51,15 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/expo"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/expo"
+      ],
       "options": {
         "command": "node ./scripts/copy-readme.js expo"
       }
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   },
   "tags": []

@@ -23,13 +23,19 @@
           {
             "input": "packages/create-nx-workspace",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              ".eslintrc.json"
+            ],
             "output": "/"
           },
           {
             "input": "packages/create-nx-workspace",
             "glob": "**/*.js",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -47,7 +53,9 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/create-nx-workspace"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/create-nx-workspace"
+      ],
       "options": {
         "commands": [
           {
@@ -63,7 +71,10 @@
         "parallel": false
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
   "implicitDependencies": [
     "workspace",

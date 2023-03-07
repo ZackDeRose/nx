@@ -3,6 +3,7 @@ import {
   readJsonFile,
   writeJsonFile,
 } from '@nrwl/devkit';
+import { fileExists } from 'nx/src/utils/fileutils';
 import { resolve } from 'path';
 
 const workspace = readAllWorkspaceConfiguration();
@@ -15,6 +16,9 @@ for (const [projectName, projectConfig] of Object.entries(workspace.projects)) {
     projectConfig.root,
     'project.json'
   );
+  if (!fileExists(projectJsonLocation)) {
+    continue;
+  }
   const currentProjectJson = readJsonFile(projectJsonLocation);
   const newTargets = {
     ...currentProjectJson.targets,

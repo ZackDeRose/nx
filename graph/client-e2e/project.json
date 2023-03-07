@@ -60,7 +60,12 @@
         "parallel": false
       }
     },
-    "lint": {}
+    "lint": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
-  "implicitDependencies": ["graph-client"]
+  "implicitDependencies": [
+    "graph-client"
+  ]
 }

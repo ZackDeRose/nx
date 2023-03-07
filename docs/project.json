@@ -3,5 +3,12 @@
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "docs",
   "projectType": "library",
-  "tags": ["scope:nx-dev"]
+  "tags": [
+    "scope:nx-dev"
+  ],
+  "targets": {
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
+  }
 }

@@ -3,16 +3,24 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "nx-dev/ui-home/src",
   "projectType": "library",
-  "tags": ["scope:nx-dev", "type:ui"],
+  "tags": [
+    "scope:nx-dev",
+    "type:ui"
+  ],
   "targets": {
     "lint": {},
     "xtest": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/nx-dev/ui-home"],
+      "outputs": [
+        "{workspaceRoot}/coverage/nx-dev/ui-home"
+      ],
       "options": {
         "jestConfig": "nx-dev/ui-home/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   }
 }

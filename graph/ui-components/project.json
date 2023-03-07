@@ -22,7 +22,9 @@
     },
     "build-storybook": {
       "executor": "@nrwl/storybook:build",
-      "outputs": ["{options.outputDir}"],
+      "outputs": [
+        "{options.outputDir}"
+      ],
       "options": {
         "uiFramework": "@storybook/react",
         "configDir": "graph/ui-components/.storybook",
@@ -33,6 +35,9 @@
           "quiet": true
         }
       }
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   }
 }

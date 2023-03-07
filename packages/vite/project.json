@@ -10,7 +10,9 @@
         "jestConfig": "packages/vite/jest.config.ts",
         "passWithNoTests": true
       },
-      "outputs": ["{workspaceRoot}/coverage/packages/vite"]
+      "outputs": [
+        "{workspaceRoot}/coverage/packages/vite"
+      ]
     },
     "build-base": {
       "executor": "@nrwl/js:swc",
@@ -33,13 +35,19 @@
           {
             "input": "packages/vite",
             "glob": "**/*.json",
-            "ignore": ["**/tsconfig*.json", "project.json", ".eslintrc.json"],
+            "ignore": [
+              "**/tsconfig*.json",
+              "project.json",
+              ".eslintrc.json"
+            ],
             "output": "/"
           },
           {
             "input": "packages/vite",
             "glob": "**/*.js",
-            "ignore": ["**/jest.config.js"],
+            "ignore": [
+              "**/jest.config.js"
+            ],
             "output": "/"
           },
           {
@@ -54,11 +62,15 @@
           }
         ]
       },
-      "outputs": ["{options.outputPath}"]
+      "outputs": [
+        "{options.outputPath}"
+      ]
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/vite"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/vite"
+      ],
       "options": {
         "command": "node ./scripts/copy-readme.js vite"
       }
@@ -82,7 +94,12 @@
           "packages/vite/migrations.json"
         ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   }
 }

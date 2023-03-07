@@ -23,7 +23,9 @@
     },
     "sitemap": {
       "executor": "nx:run-commands",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/nx-dev/nx-dev/public",
         "command": "yarn next-sitemap --config ./nx-dev/nx-dev/next-sitemap.config.js"
@@ -31,21 +33,27 @@
     },
     "sync-documentation": {
       "executor": "nx:run-commands",
-      "outputs": ["{projectRoot}/public/documentation"],
+      "outputs": [
+        "{projectRoot}/public/documentation"
+      ],
       "options": {
         "command": "ts-node -P ./scripts/tsconfig.scripts.json ./scripts/documentation/nx-dev-docs-latest-sync.ts"
       }
     },
     "generate-og-images": {
       "executor": "nx:run-commands",
-      "outputs": ["{projectRoot}/public/images/open-graph"],
+      "outputs": [
+        "{projectRoot}/public/images/open-graph"
+      ],
       "options": {
         "command": "ts-node -P ./scripts/tsconfig.scripts.json ./scripts/documentation/open-graph/generate-images.ts"
       }
     },
     "build-base": {
       "executor": "@nrwl/next:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "root": "nx-dev/nx-dev",
         "outputPath": "dist/nx-dev/nx-dev"
@@ -77,7 +85,9 @@
     },
     "deploy-build": {
       "executor": "nx:run-commands",
-      "outputs": ["{projectRoot}/public/documentation"],
+      "outputs": [
+        "{projectRoot}/public/documentation"
+      ],
       "options": {
         "commands": [
           {
@@ -100,8 +110,16 @@
       }
     },
     "lint": {},
-    "test": {}
+    "test": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   },
-  "tags": ["scope:nx-dev", "type:app"],
-  "implicitDependencies": ["docs"]
+  "tags": [
+    "scope:nx-dev",
+    "type:app"
+  ],
+  "implicitDependencies": [
+    "docs"
+  ]
 }

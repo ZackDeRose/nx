@@ -23,7 +23,9 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/cra-to-nx"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/cra-to-nx"
+      ],
       "options": {
         "commands": [
           {
@@ -41,6 +43,9 @@
       "options": {
         "command": "node tools/scripts/publish.js cra-to-nx {args.ver} {args.tag} {args.local}"
       }
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   }
 }

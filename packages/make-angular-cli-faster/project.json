@@ -21,7 +21,9 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/build/packages/make-angular-cli-faster"],
+      "outputs": [
+        "{workspaceRoot}/build/packages/make-angular-cli-faster"
+      ],
       "options": {
         "commands": [
           {
@@ -33,6 +35,9 @@
         ],
         "parallel": false
       }
+    },
+    "new-test": {
+      "command": "echo \"hello world\""
     }
   }
 }

@@ -3,9 +3,15 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "nx-dev/ui-member-card/src",
   "projectType": "library",
-  "tags": ["scope:nx-dev", "type:ui"],
+  "tags": [
+    "scope:nx-dev",
+    "type:ui"
+  ],
   "targets": {
     "lint": {},
-    "test": {}
+    "test": {},
+    "new-test": {
+      "command": "echo \"hello world\""
+    }
   }
 }
